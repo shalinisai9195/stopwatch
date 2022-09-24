@@ -1,0 +1,46 @@
+---js code---
+let ssec = document.querySelector('#stopwatch label.secs').textContent;
+let ss = parseInt(ssec);
+let sminute = document.querySelector('#stopwatch label.minut').textContent;
+let mm = parseInt(sminute);
+let shours = document.querySelector('#stopwatch label.hours').textContent;
+let hh = parseInt(shours);
+
+function startfun(){
+let setsec = setInterval(()=>{
+       ss += 1;
+       console.log(document.querySelector('#stopwatch label.secs').textContent = ss);
+       if(ss == 30)
+       {
+        ss = 0;
+        console.log(document.querySelector('#stopwatch label.secs').textContent = ss + '0');
+        mm +=1;
+        console.log(document.querySelector('#stopwatch label.minut').textContent= mm );
+      
+        if(mm == 10){
+            mm = 0;
+            console.log(document.querySelector('#stopwatch label.minut').textContent= mm +'0');
+           
+           hh +=1;
+           console.log(document.querySelector('#stopwatch label.hours').textContent = hh);
+           
+         }
+         //clearInterval(setsec);
+       }
+    
+},60)
+}
+
+function restfun(){
+
+    document.querySelector('#stopwatch').textContent = '00 : 00 : 00';
+
+};
+
+function stopfun(){
+    document.querySelector('#stopwatch').innerHTML;
+    // document.querySelector('#stopwatch label.secs').textContent;
+    // document.querySelector('#stopwatch label.hours').textContent;
+    // document.querySelector('#stopwatch label.minut').textContent;
+};
+
