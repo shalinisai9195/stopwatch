@@ -1,3 +1,18 @@
+------HTML------
+<body>
+    
+    <div >
+        <p id="stopwatch"><label for="hr" class="hours">00 </label> : <label for="mm" class="minut">00 </label>: 
+            <label for="ss" class="secs">00 </label> </p>
+    </div>
+   <button onclick="startfun(this)">start</button>
+   <button onclick="stopfun(this)">Stop</button>
+   <button onclick="restfun(this)">Reset</button>
+    <script src="/StopwatchProject/script2.js"></script>
+</body>
+
+
+
 ---js code---
 let ssec = document.querySelector('#stopwatch label.secs').textContent;
 let ss = parseInt(ssec);
